@@ -33,24 +33,24 @@ public class Controller {
     //metodos de salida de datos
     //probando charChain
     public void jsShowAllCharChain() {
-        CharChain jsCharChain = new CharChain(jsGetString());
-        int vocalCount = jsCharChain.jsCharCount(true);
+        CharChain jsCharChain = new CharChain();
+        int vocalCount = jsCharChain.jsCharCount(jsGetString(), true);
         System.out.println("Cantidad de vocales: " + vocalCount);
 
-        int consonantCount = jsCharChain.jsCharCount(false);
+        int consonantCount = jsCharChain.jsCharCount(jsGetString(), false);
         System.out.println("Cantidad de consonantes: " + consonantCount);
 
-        String deletedString = jsCharChain.jsDeleteChar(false, jsGetChar());
+        String deletedString = jsCharChain.jsDeleteChar(jsGetString(), false, jsGetChar());
         System.out.println("Cadena modificada: " + deletedString);
         
-        deletedString = jsCharChain.jsDeleteChar(true,' ');
+        deletedString = jsCharChain.jsDeleteChar(jsGetString(), true,' ');
         System.out.println("Cadena sin J: " + deletedString);
 
-        String modifiedString = jsCharChain.jsLowerCaseIntoUpperCase(true, false);
+        String modifiedString = jsCharChain.jsLowerCaseIntoUpperCase(jsGetString(),true, false);
         System.out.println("Vocales a mayúsculas e invertida: " + modifiedString);
-        modifiedString = jsCharChain.jsLowerCaseIntoUpperCase(false, false);
+        modifiedString = jsCharChain.jsLowerCaseIntoUpperCase(jsGetString(), false, false);
         System.out.println("Consonantes a mayúsculas e invertida: " + modifiedString);
-        modifiedString = jsCharChain.jsLowerCaseIntoUpperCase(false, true);
+        modifiedString = jsCharChain.jsLowerCaseIntoUpperCase(jsGetString(), false, true);
         System.out.println("Mayúsculas alternadas: " + modifiedString);
 
         jsCharChain.jsAnagramGame();

@@ -5,15 +5,9 @@ import java.util.Scanner;
 public class CharChain {
 
     //attributes    
-    private String jsInput;
     private String jsVocals = "aeiouáéíóúAEIOUÁÉÍÓÚ";
     private String jsConsonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
-    private int jsLettersCount;
-
-    //constructor
-    public CharChain(String jsInput) {
-        this.jsInput = jsInput;
-    }
+    private int jsLettersCount = 0;
 
     //methods
     /*
@@ -22,7 +16,7 @@ public class CharChain {
      * @return int
      * @description: Count the number of vowels or consonants in a string
      */
-    public int jsCharCount (boolean jsIsVocal){
+    public int jsCharCount (String jsInput ,boolean jsIsVocal){
         if (jsIsVocal) {
             for (int i = 0; i < jsInput.length(); i++) {
                 char jsChar = jsInput.charAt(i);
@@ -31,6 +25,7 @@ public class CharChain {
                 }
             }
         } else {
+            jsLettersCount = 0; // Reset count for consonants
             for (int i = 0; i < jsInput.length(); i++) {
                 char jsChar = jsInput.charAt(i);
                 if (jsConsonants.indexOf(jsChar) != -1) {
@@ -49,7 +44,7 @@ public class CharChain {
      * @return String
      * @description: Delete the indicated vowel or consonant in a string
      */
-    public String jsDeleteChar (boolean jsDeleteJ, char jsCharToDelete){
+    public String jsDeleteChar (String jsInput,boolean jsDeleteJ, char jsCharToDelete){
         jsInput = jsInput.replace(jsCharToDelete, ' ');
         if (jsDeleteJ) {
             jsInput = jsInput.replace('j', ' ');
@@ -67,32 +62,32 @@ public class CharChain {
      * @description: Change the case of the vowels or consonants in a string and return the reverse string, except for jsAlternate
      * @return String
      */
-    public String jsLowerCaseIntoUpperCase (boolean jsIsVocal, boolean jsAlternate){
-        StringBuilder jsBuildedString = new StringBuilder(jsInput);
-        if (jsIsVocal && !jsAlternate) {
+    public String jsLowerCaseIntoUpperCase(String jsInput, boolean jsIsVocal, boolean jsAlternate) {
+        StringBuilder jsBuildedString = new StringBuilder();
+
+        if (jsAlternate) {
+            // Alternar mayúsculas y minúsculas en toda la cadena
             for (int i = 0; i < jsInput.length(); i++) {
-                char jsChar = jsInput.charAt(i);
-                if (jsVocals.indexOf(jsChar) != -1) {
-                    jsInput = jsInput.replace(jsChar, Character.toUpperCase(jsChar));
+                char c = jsInput.charAt(i);
+                if (i % 2 == 0) {
+                    jsBuildedString.append(Character.toLowerCase(c));
+                } else {
+                    jsBuildedString.append(Character.toUpperCase(c));
                 }
             }
-        } else {
-            for (int i = 0; i < jsInput.length(); i++) {
-                char jsChar = jsInput.charAt(i);
-                if (jsConsonants.indexOf(jsChar) != -1) {
-                    jsInput = jsInput.replace(jsChar, Character.toLowerCase(jsChar));
-                }
-            }
+            return jsBuildedString.toString();
         }
-        
-        if (jsAlternate && !jsIsVocal) {
-            for (int i = 0; i<jsInput.length(); i++){
-                char jsChar = jsInput.charAt(i);
-                if (i%2 !=0){
-                    jsInput = jsInput.replace(jsChar, Character.toUpperCase(jsChar));
-                }
+
+        // Si jsAlternate es false, convertir solo vocales o consonantes a mayúsculas y luego invertir la cadena
+        for (int i = 0; i < jsInput.length(); i++) {
+            char c = jsInput.charAt(i);
+            if (jsIsVocal && jsVocals.indexOf(c) != -1) {
+                jsBuildedString.append(Character.toUpperCase(c));
+            } else if (!jsIsVocal && jsConsonants.indexOf(c) != -1) {
+                jsBuildedString.append(Character.toUpperCase(c));
+            } else {
+                jsBuildedString.append(c);
             }
-            return jsInput;
         }
         return jsBuildedString.reverse().toString();
     }
