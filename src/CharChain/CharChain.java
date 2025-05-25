@@ -1,4 +1,4 @@
-package CharChain;
+package charchain;
 
 import java.util.Scanner;
 
@@ -13,6 +13,7 @@ public class CharChain {
     /*
      * jsCharCount
      * @param jsIsVocal boolean 
+     * @param jsInput String
      * @return int
      * @description: Count the number of vowels or consonants in a string
      */
@@ -128,4 +129,3 @@ public class CharChain {
     }
 }
 
-// #TODO: Cada metodo requiere un string de entrada distinto

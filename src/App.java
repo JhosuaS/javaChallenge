@@ -1,8 +1,10 @@
 
 public class App {
     public static void main (String[] args) throws Exception {
-    // #TODO realizar la llamada al controlador 
+    // #TODO incluir la bienvenida 
     Controller jsController = new Controller();
     jsController.jsShowAllCharChain();
+    jsController.jsShowAllArray();
+    jsController.jsShowAllFigures();
     } 
 }

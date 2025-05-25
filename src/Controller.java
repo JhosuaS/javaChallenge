@@ -1,4 +1,6 @@
-import CharChain.*;
+import charchain.*;
+import array.*;
+import figures.*;
 
 public class Controller {
     //TODO incluir toda la lógica de los modelos necesarios
@@ -30,8 +32,20 @@ public class Controller {
         return jsInput.toString();
     }
 
+    public int jsGetInt() {
+        int jsNumber = 0;
+        try {
+            System.out.print("Ingrese un número entero: ");
+            jsNumber = Integer.parseInt(System.console().readLine());
+        } catch (Exception e) {
+            System.out.println("Error al leer el número: " + e.getMessage());
+        }
+        return jsNumber;
+    }
+
     //metodos de salida de datos
     //probando charChain
+    
     public void jsShowAllCharChain() {
         CharChain jsCharChain = new CharChain();
         int vocalCount = jsCharChain.jsCharCount(jsGetString(), true);
@@ -54,6 +68,26 @@ public class Controller {
         System.out.println("Mayúsculas alternadas: " + modifiedString);
 
         jsCharChain.jsAnagramGame();
+    } 
+    
+
+    //probando Array
+    public void jsShowAllArray() {
+        Array jsArray = new Array();
+        System.out.println("Ejercicios con Arrays:");
+        jsArray.jsLoadingFullName();
+        jsArray.jsDrawMatrix(jsGetInt(),jsGetChar());
+        jsArray.jsDrawXy(jsGetInt());
+        jsArray.jsDrawCross();
+        jsArray.jsRandonMatrixName();
+    }
+
+    public void jsShowAllFigures() {
+        Figures jsFigures = new Figures();
+        jsFigures.jsFigure16(jsGetInt());
+        jsFigures.jsFigure17(jsGetInt());
+        jsFigures.jsFigure18(jsGetInt());
+        jsFigures.jsFigure19(jsGetInt());
     }
 
     
