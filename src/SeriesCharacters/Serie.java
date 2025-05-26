@@ -1,6 +1,26 @@
 package SeriesCharacters;
 
 public class Serie {
+    public void g3_imprimirSeries() {
+        System.out.println("Series:");
+        System.out.println("Secuencia 1: ");
+        secuenciac1();
+        System.out.println("");
+        System.out.println("Secuencia 2: ");
+        secuenciac2();
+        System.out.println("");
+        System.out.println("Secuencia 3: ");
+        secuenciac3();
+        System.out.println("");
+        System.out.println("Secuencia 4: ");
+        secuenciac4();
+        System.out.println("");
+        System.out.println("Secuencia 5: ");
+        secuenciac5();
+        System.out.println("");
+        System.out.println("Secuencia 6: ");
+        secuenciac6(); 
+    }
     public void secuenciac1() {
         String signo_suma = "+";
         String signo_resta = "-";
