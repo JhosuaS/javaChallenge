@@ -2,6 +2,233 @@ package figures;
 
 public class Figures {
     
+    /*Cuadrado con asteriscos hueco */
+    public void jsFigure1(){
+        int size = 5;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i == 0 || i == size-1 || j == 0 || j == size-1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // Cuadrado hueco con * y + alternados
+    public void jsFigure2() {
+        int size = 5;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+                    System.out.print((i + j) % 2 == 0 ? "* " : "+ ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // Triángulo rectángulo izquierdo con asteriscos
+    public void jsFigure3(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Triángulo rectángulo derecho con asteriscos
+    public void jsFigure4(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = rows; j > i; j--) {
+                System.out.print("  ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    //Triangulo equilatero invertido con asteriscos
+    public void jsFigure5(int filas) {
+        for (int i = filas; i >= 1; i--) {
+            for (int j = 0; j < filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println(); 
+        }
+    }
+
+    //Triángulo equilátero con asteriscos
+    public void jsFigure6(int filas) {
+        System.out.println("Pirámide con " + filas + " filas:");
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    //Escalera
+    public void jsFigure7(int niveles, int espaciosPorNivel) {
+        for (int i = 0; i < niveles; i++) {
+            for (int j = 0; j < i * espaciosPorNivel; j++) {
+                System.out.print(" ");
+            }           
+            if (i % 2 == 0) {
+                System.out.println("_");
+            } else {
+                System.out.println("   |");  
+            }
+        }
+    }
+
+    //Escalera invertida
+    public void jsFigure8(int niveles, int espaciosPorNivel) {
+        for (int i = 0; i < niveles; i++) {
+            for (int j = 0; j < (niveles - 1 - i) * espaciosPorNivel; j++) {
+                System.out.print(" ");
+            }
+            if (i % 2 == 0) {
+                System.out.println("_");
+            } else {
+                System.out.println("   |"); 
+            }
+        }
+    }
+
+    //Escalera doble
+    public void jsFigure9(int niveles, int espaciosBase) {
+        for (int i = 0; i < niveles; i++) {
+            for (int j = 0; j < (niveles - 1 - i) * espaciosBase; j++) {
+                System.out.print(" ");
+            }
+            if (i % 2 == 0) {
+                System.out.print("_");
+            } else {
+                System.out.print("|");
+            }
+            for (int k = 0; k < i * espaciosBase * 2; k++) {
+                System.out.print(" ");
+            }
+            if (i % 2 == 0) {
+                System.out.println("   |"); 
+            } else {
+                System.out.println("_");
+            }
+        }
+    }
+
+    //Escalera con + y - alternados
+    public void jsFigure10(int niveles, int espaciosPorNivel) {
+        for (int i = 0; i < niveles; i++) {
+            for (int j = 0; j < i * espaciosPorNivel; j++) {
+                System.out.print(" ");
+            }
+            if (i % 2 == 0) {
+                System.out.println("+");
+            } else {
+                System.out.println("-");
+            }
+            if (i < niveles - 1) {
+                for (int j = 0; j < (i + 1) * espaciosPorNivel; j++) {
+                    System.out.print(" ");
+                }
+                System.out.println("|");
+            }
+        }
+    }
+
+    //Escalera progresiva 
+    public void jsFigure11(int levels, int baseSpaces) {
+        for (int i = 1; i <= levels; i++) {
+            for (int j = 1; j < i * baseSpaces; j++) {
+                System.out.print(" ");
+            }
+        
+            System.out.print("|");
+            for (int k = 0; k < i; k++) {
+                System.out.print("_");
+            }   
+        
+            System.out.println();
+        }
+    }
+
+    //Escalera numeral inversa
+    public void jsFigure12(int rows) {
+        System.out.println("Figura descendente numérica de " + rows + " filas:");
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j); 
+            }
+            System.out.println(); 
+        }
+    }
+
+    //Escalera numeral
+    public void jsFigure13(int rows) {
+        System.out.println("Triángulo numérico ascendente de " + rows + " filas:");
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j); 
+            }
+            System.out.println(); 
+        }
+    }
+
+    //Escalera de pascal
+    public void jsFigure14(int filas) {
+        System.out.println("Triángulo de Pascal de " + filas + " filas:");
+        
+        for (int i = 0; i < filas; i++) {
+            // Espacios para centrar
+            for (int j = 0; j < filas - i - 1; j++) {
+                System.out.print("  ");
+            }
+            
+            int numero = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("%4d", numero);
+                numero = numero * (i - j) / (j + 1); 
+            }
+            System.out.println();
+        }
+    }
+
+    public void jsFigure15(int numFilas) {
+        System.out.println("Triángulo de Pascal aplanado de " + numFilas + " filas:");
+        
+        for (int i = 0; i < numFilas; i++) {
+            int filaReal = 2 * i;  
+            int numero = 1;
+            
+            for (int s = 0; s < numFilas - i - 1; s++) {
+                System.out.print("  ");
+            }
+            
+            for (int j = 0; j <= filaReal; j++) {
+                System.out.printf("%4d", numero);  
+                numero = numero * (filaReal - j) / (j + 1);  
+            }
+            System.out.println();
+        }
+    }
+
+
     /*
      * Dibuja una cruz en una matriz de tamaño jsSize.
      * La cruz se dibuja con '-' en las diagonales y '+' en las esquinas y el centro.

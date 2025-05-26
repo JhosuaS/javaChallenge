@@ -1,4 +1,5 @@
-import charchain.*;
+import CharChain.*;
+import CharChain.CharChain;
 import array.*;
 import figures.*;
 
@@ -84,11 +85,36 @@ public class Controller {
 
     public void jsShowAllFigures() {
         Figures jsFigures = new Figures();
+        System.out.println("Ejercicios con Figures:");
+        jsFigures.jsFigure1();
+        jsFigures.jsFigure2();
+        jsFigures.jsFigure3(4); 
+        jsFigures.jsFigure4(4);
+        jsFigures.jsFigure5(5);
+        jsFigures.jsFigure6(jsGetInt());
+        jsFigures.jsFigure7(6, 5);
+        jsFigures.jsFigure8(6, 5);
+        jsFigures.jsFigure9(5, 4);
+        jsFigures.jsFigure10(4, 6);
+        jsFigures.jsFigure11(4, 4);
+        jsFigures.jsFigure12(jsGetInt());
+        jsFigures.jsFigure13(jsGetInt());
+        jsFigures.jsFigure14(jsGetInt());
+        jsFigures.jsFigure15(jsGetInt());
         jsFigures.jsFigure16(jsGetInt());
         jsFigures.jsFigure17(jsGetInt());
         jsFigures.jsFigure18(jsGetInt());
         jsFigures.jsFigure19(jsGetInt());
     }
 
-    
+    public void jsShowAllSeriesCharacters() {
+        SeriesCharacters.Serie jsSeries = new SeriesCharacters.Serie(); 
+        System.out.println("Ejercicios con Series de Caracteres:");
+      
+        jsSeries.jsSeries6B(jsGetInt());
+        jsSeries.jsSeries7(jsGetInt());
+        jsSeries.jsSeries8(jsGetInt());
+        jsSeries.jsSeries9(jsGetInt());
+    }
+
 }

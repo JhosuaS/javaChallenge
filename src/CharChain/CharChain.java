@@ -1,4 +1,4 @@
-package charchain;
+package CharChain;
 
 import java.util.Scanner;
 
