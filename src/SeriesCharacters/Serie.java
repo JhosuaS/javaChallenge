@@ -1,6 +1,84 @@
 package SeriesCharacters;
 
 public class Serie {
+    public void secuenciac1() {
+        String signo_suma = "+";
+        String signo_resta = "-";
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0)
+                System.out.print(signo_suma);
+            else
+                System.out.print(signo_resta);
+        }
+    }
+
+    public void secuenciac2() {
+        String signo_suma = "+";
+        int F1 = 1;
+        int F2 = 0;
+        int F0;
+        if (n >= 1)
+            System.out.print(signo_suma + " ");
+        for (int i = 0; i < n; i++) {
+            F0 = F1 + F2;
+            for (int x = 1; x <= F0; x++)
+                System.out.print(signo_suma);
+            F2 = F1;
+            F1 = F0;
+            System.out.print(" ");
+        }
+    }
+
+    public void secuenciac3() {
+        String signo_suma = "+";
+        int contador_nprimo = 0;
+        int i = 2;
+        while (contador_nprimo < n && i <= 10000) {
+            boolean primo = true;
+            int j = 2;
+            while (j < i) {
+                if (i % j == 0) {
+                    primo = false;
+                    j = i;
+                } else {
+                    j++;
+                }
+            }
+            if (primo) {
+                for (j = 1; j <= i; j++)
+                    System.out.print(signo_suma);
+                contador_nprimo++;
+                System.out.print(" ");
+            }
+            i++;
+        }
+    }
+
+    public void secuenciac4() {
+        String cadenaCaracteres = "+-*/";
+        for (int i = 0; i <= n - 1; i++) {
+            char caracter = cadenaCaracteres.charAt(i % cadenaCaracteres.length());
+            System.out.print(caracter + " ");
+        }
+    }
+
+    public void secuenciac5() {
+        String cadenaCaracteres = "\\|/-|";
+        for (int i = 0; i <= n - 1; i++) {
+            char caracter = cadenaCaracteres.charAt(i % cadenaCaracteres.length());
+            System.out.print(caracter + " ");
+        }
+    }
+
+    public void secuenciac6() {
+        for (char i = 0; i <= n; i++) {
+            char letra = (char) (97 + (i - 26 * (i / 26)));
+            System.out.print(letra + " ");
+        }
+    }
+
+
+    
     //Serie de abecedario alternando letras y signos
     public void jsSeries6B(int cantidad) {
         char letra = 'a';
