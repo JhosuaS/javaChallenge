@@ -1,4 +1,6 @@
-package series;
+package SerieNumerica;
+
+import java.util.Scanner;
 
 public class SerieNumerica {
 
@@ -128,7 +130,7 @@ public class SerieNumerica {
     }
 }
 // serie uno
-public class g3_serieFibonacci {
+class G3SerieFibonacci {
     public void ejecutar(){
         int n = 0 , a = 0 , b= 1 , siguiente = 0;
         Scanner scanner = new Scanner(System.in);
@@ -146,7 +148,7 @@ public class g3_serieFibonacci {
     }
 }
 // serie dos
-public class g3_serieAlterna {
+class G3SerieAlterna {
     public void ejecutar(){
         int n = 0, impar = 1 ;
         Scanner scanner = new Scanner(System.in);
@@ -167,7 +169,7 @@ public class g3_serieAlterna {
     }
 }
 // serie tres 
-public class g3_serieMixto {
+class G3SerieMixto {
     public void ejecutar() {
         int n = 0, a = 0, b = 1, siguiente = 0;
         Scanner scanner = new Scanner(System.in);
@@ -192,7 +194,7 @@ public class g3_serieMixto {
     }
    
 //serie cuatro 
-public class g3_serieMixto2 {
+class G3SerieMixto2 {
     public void ejecutar(){
         int n = 0, a = 0, b = 1, siguiente = 0;
         Scanner scanner = new Scanner(System.in);
@@ -218,7 +220,7 @@ public class g3_serieMixto2 {
 
 }
 // serie cinco 
-public class g3_seriePrimos {
+class G3SeriePrimos {
     private boolean esPrimo(int numero){
         if (numero <= 1){
             return false;

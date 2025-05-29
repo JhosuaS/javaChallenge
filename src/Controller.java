@@ -1,5 +1,4 @@
 import CharChain.*;
-import CharChain.CharChain;
 import array.*;
 import figures.*;
 
@@ -85,7 +84,7 @@ public class Controller {
 
     public void jsShowAllFigures() {
         Figures jsFigures = new Figures();
-        System.out.println("Ejercicios con Figures:");
+        System.out.println("Ejercicios con Figuras:");
         jsFigures.jsFigure1();
         jsFigures.jsFigure2();
         jsFigures.jsFigure3(4); 
@@ -110,7 +109,24 @@ public class Controller {
     public void jsShowAllSeriesCharacters() {
         SeriesCharacters.Serie jsSeries = new SeriesCharacters.Serie(); 
         System.out.println("Ejercicios con Series de Caracteres:");
-      
+        System.out.println("Series:");
+        System.out.println("Secuencia 1: ");
+        jsSeries.secuenciac1(jsGetInt());
+        System.out.println("");
+        System.out.println("Secuencia 2: ");
+        jsSeries.secuenciac2(jsGetInt());
+        System.out.println("");
+        System.out.println("Secuencia 3: ");
+        jsSeries.secuenciac3(jsGetInt());
+        System.out.println("");
+        System.out.println("Secuencia 4: ");
+        jsSeries.secuenciac4(jsGetInt());
+        System.out.println("");
+        System.out.println("Secuencia 5: ");
+        jsSeries.secuenciac5(jsGetInt());
+        System.out.println("");
+        System.out.println("Secuencia 6: ");
+        jsSeries.secuenciac6(jsGetInt());
         jsSeries.jsSeries6B(jsGetInt());
         jsSeries.jsSeries7(jsGetInt());
         jsSeries.jsSeries8(jsGetInt());

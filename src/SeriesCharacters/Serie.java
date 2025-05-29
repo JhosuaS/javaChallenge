@@ -1,27 +1,8 @@
 package SeriesCharacters;
 
 public class Serie {
-    public void g3_imprimirSeries() {
-        System.out.println("Series:");
-        System.out.println("Secuencia 1: ");
-        secuenciac1();
-        System.out.println("");
-        System.out.println("Secuencia 2: ");
-        secuenciac2();
-        System.out.println("");
-        System.out.println("Secuencia 3: ");
-        secuenciac3();
-        System.out.println("");
-        System.out.println("Secuencia 4: ");
-        secuenciac4();
-        System.out.println("");
-        System.out.println("Secuencia 5: ");
-        secuenciac5();
-        System.out.println("");
-        System.out.println("Secuencia 6: ");
-        secuenciac6(); 
-    }
-    public void secuenciac1() {
+    
+    public void secuenciac1(int n) {
         String signo_suma = "+";
         String signo_resta = "-";
         for (int i = 0; i < n; i++) {
@@ -32,7 +13,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac2() {
+    public void secuenciac2(int n) {
         String signo_suma = "+";
         int F1 = 1;
         int F2 = 0;
@@ -49,7 +30,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac3() {
+    public void secuenciac3(int n) {
         String signo_suma = "+";
         int contador_nprimo = 0;
         int i = 2;
@@ -74,7 +55,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac4() {
+    public void secuenciac4(int n) {
         String cadenaCaracteres = "+-*/";
         for (int i = 0; i <= n - 1; i++) {
             char caracter = cadenaCaracteres.charAt(i % cadenaCaracteres.length());
@@ -82,7 +63,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac5() {
+    public void secuenciac5(int n) {
         String cadenaCaracteres = "\\|/-|";
         for (int i = 0; i <= n - 1; i++) {
             char caracter = cadenaCaracteres.charAt(i % cadenaCaracteres.length());
@@ -90,7 +71,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac6() {
+    public void secuenciac6(int n) {
         for (char i = 0; i <= n; i++) {
             char letra = (char) (97 + (i - 26 * (i / 26)));
             System.out.print(letra + " ");
