@@ -91,10 +91,10 @@ public class Controller {
         jsFigures.jsFigure4(4);
         jsFigures.jsFigure5(5);
         jsFigures.jsFigure6(jsGetInt());
-        jsFigures.jsFigure7(6, 5);
-        jsFigures.jsFigure8(6, 5);
-        jsFigures.jsFigure9(5, 4);
-        jsFigures.jsFigure10(4, 6);
+        jsFigures.jsFigure7(jsGetInt());
+        jsFigures.jsFigure8(jsGetInt());
+        jsFigures.jsFigure9(jsGetInt());
+        jsFigures.jsFigure10(jsGetInt());
         jsFigures.jsFigure11(4, 4);
         jsFigures.jsFigure12(jsGetInt());
         jsFigures.jsFigure13(jsGetInt());

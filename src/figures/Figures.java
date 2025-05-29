@@ -83,72 +83,62 @@ public class Figures {
     }
 
     //Escalera
-    public void jsFigure7(int niveles, int espaciosPorNivel) {
-        for (int i = 0; i < niveles; i++) {
-            for (int j = 0; j < i * espaciosPorNivel; j++) {
-                System.out.print(" ");
-            }           
-            if (i % 2 == 0) {
-                System.out.println("_");
-            } else {
-                System.out.println("   |");  
+    public void jsFigure7(int n) {  
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("    ");
             }
+            System.out.println("|___");
         }
     }
 
     //Escalera invertida
-    public void jsFigure8(int niveles, int espaciosPorNivel) {
-        for (int i = 0; i < niveles; i++) {
-            for (int j = 0; j < (niveles - 1 - i) * espaciosPorNivel; j++) {
-                System.out.print(" ");
+    public void jsFigure8(int n) {  
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print("    ");
             }
-            if (i % 2 == 0) {
-                System.out.println("_");
-            } else {
-                System.out.println("   |"); 
-            }
+            System.out.println("___|");
         }
     }
 
     //Escalera doble
-    public void jsFigure9(int niveles, int espaciosBase) {
-        for (int i = 0; i < niveles; i++) {
-            for (int j = 0; j < (niveles - 1 - i) * espaciosBase; j++) {
-                System.out.print(" ");
-            }
-            if (i % 2 == 0) {
-                System.out.print("_");
-            } else {
-                System.out.print("|");
-            }
-            for (int k = 0; k < i * espaciosBase * 2; k++) {
-                System.out.print(" ");
-            }
-            if (i % 2 == 0) {
-                System.out.println("   |"); 
-            } else {
-                System.out.println("_");
-            }
+    public void jsFigure9(int niveles) {  
+        for (int i = 0; i < niveles - 1; i++) {
+            System.out.print("     "); 
         }
-    }
-
-    //Escalera con + y - alternados
-    public void jsFigure10(int niveles, int espaciosPorNivel) {
+        System.out.println("    ___"); 
         for (int i = 0; i < niveles; i++) {
-            for (int j = 0; j < i * espaciosPorNivel; j++) {
-                System.out.print(" ");
+            for (int j = 0; j < niveles - i - 1; j++) {
+                System.out.print("     "); 
             }
-            if (i % 2 == 0) {
-                System.out.println("+");
-            } else {
-                System.out.println("-");
-            }
-            if (i < niveles - 1) {
-                for (int j = 0; j < (i + 1) * espaciosPorNivel; j++) {
+            System.out.print("___|  ");
+            if (i > 0) {
+                for (int j = 0; j < i * 10; j++) { 
                     System.out.print(" ");
                 }
-                System.out.println("|");
             }
+            System.out.println(" |___");
+        }
+    }
+    
+
+    //Escalera con + y - alternados
+    public void jsFigure10(int t) {  
+        int espacios = 0;
+        for (int c = 1; c <= t; c++) {
+            for (int f = 0; f < espacios; f++) {
+                System.out.print(" ");
+            }   
+            if (espacios > 0) {
+                System.out.print("| ");
+            }
+            if (c % 2 == 0) {
+                System.out.println("_-_");
+            } else {
+                System.out.println("_+_");
+            }
+            espacios += 6;
         }
     }
 
