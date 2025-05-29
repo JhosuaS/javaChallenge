@@ -2,7 +2,7 @@ package SeriesCharacters;
 
 public class Serie {
     
-    public void secuenciac1(int n) {
+    public void pwSecuenciac1(int n) {
         String signo_suma = "+";
         String signo_resta = "-";
         for (int i = 0; i < n; i++) {
@@ -13,7 +13,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac2(int n) {
+    public void pwSecuenciac2(int n) {
         String signo_suma = "+";
         int F1 = 1;
         int F2 = 0;
@@ -30,7 +30,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac3(int n) {
+    public void pwSecuenciac3(int n) {
         String signo_suma = "+";
         int contador_nprimo = 0;
         int i = 2;
@@ -55,7 +55,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac4(int n) {
+    public void pwSecuenciac4(int n) {
         String cadenaCaracteres = "+-*/";
         for (int i = 0; i <= n - 1; i++) {
             char caracter = cadenaCaracteres.charAt(i % cadenaCaracteres.length());
@@ -63,7 +63,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac5(int n) {
+    public void pwSecuenciac5(int n) {
         String cadenaCaracteres = "\\|/-|";
         for (int i = 0; i <= n - 1; i++) {
             char caracter = cadenaCaracteres.charAt(i % cadenaCaracteres.length());
@@ -71,7 +71,7 @@ public class Serie {
         }
     }
 
-    public void secuenciac6(int n) {
+    public void pwSecuenciac6(int n) {
         for (char i = 0; i <= n; i++) {
             char letra = (char) (97 + (i - 26 * (i / 26)));
             System.out.print(letra + " ");
